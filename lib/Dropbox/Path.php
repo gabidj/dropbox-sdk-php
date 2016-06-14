@@ -163,9 +163,9 @@ final class Path
      */
     static function checkArgNonRoot($argName, $value)
     {
-        if ($value === null) throw new \InvalidArgumentException("'$argName' must not be null");
-        if (!is_string($value)) throw new \InvalidArgumentException("'$argName' must be a string");
+        Checker::argStringNonEmpty($argName, $value);
+
         $error = self::findErrorNonRoot($value);
-        if ($error !== null) throw new \InvalidArgumentException("'$argName'': bad path: $error: ".Util::q($value));
+        if ($error !== null) throw new \InvalidArgumentException("'$argName': bad path: $error: ".Util::q($value));
     }
 }
