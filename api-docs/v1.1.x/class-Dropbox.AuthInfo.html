@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="generator" content="ApiGen 2.8.0" />
+	<meta charset="utf-8">
 
 	<title>Class Dropbox\AuthInfo | Dropbox SDK for PHP</title>
 
-	<script type="text/javascript" src="resources/combined.js?152231664"></script>
-	<script type="text/javascript" src="elementlist.js?1099075339"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
 
 </head>
 
@@ -65,6 +62,7 @@
 				<li><a href="class-Dropbox.Exception_ProtocolError.html">Dropbox\Exception_ProtocolError</a></li>
 				<li><a href="class-Dropbox.Exception_RetryLater.html">Dropbox\Exception_RetryLater</a></li>
 				<li><a href="class-Dropbox.Exception_ServerError.html">Dropbox\Exception_ServerError</a></li>
+				<li><a href="class-Dropbox.HostLoadException.html">Dropbox\HostLoadException</a></li>
 				<li><a href="class-Dropbox.StreamReadException.html">Dropbox\StreamReadException</a></li>
 				<li><a href="class-Dropbox.WebAuthException_BadRequest.html">Dropbox\WebAuthException_BadRequest</a></li>
 				<li><a href="class-Dropbox.WebAuthException_BadState.html">Dropbox\WebAuthException_BadState</a></li>
@@ -83,10 +81,9 @@
 <div id="right">
 <div id="rightInner">
 	<form id="search">
-		<input type="hidden" name="cx" value="" />
-		<input type="hidden" name="ie" value="UTF-8" />
-		<input type="text" name="q" class="text" />
-		<input type="submit" value="Search" />
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
 	</form>
 
 	<div id="navigation">
@@ -98,9 +95,6 @@
 <span>Class</span>			</li>
 		</ul>
 		<ul>
-			<li>
-				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
-			</li>
 		</ul>
 		<ul>
 		</ul>
@@ -111,11 +105,9 @@
 
 
 	<div class="description">
-	
-<p>This class contains methods to load an AppInfo and AccessToken from a JSON
-file. This can help simplify simple scripts (such as the example programs that
-come with the SDK) but is probably not useful in typical Dropbox API apps.</p>
-
+	<p>This class contains methods to load an AppInfo and AccessToken from a JSON file.
+This can help simplify simple scripts (such as the example programs that come with the
+SDK) but is probably not useful in typical Dropbox API apps.</p>
 	</div>
 
 
@@ -127,22 +119,24 @@ come with the SDK) but is probably not useful in typical Dropbox API apps.</p>
 
 
 	<div class="info">
-		<b>Final</b><br />
+		<b>Final</b><br>
 		
-		<b>Namespace:</b> Dropbox<br />
+		<b>Namespace:</b> Dropbox<br>
 		
 
-		<b>Located at</b> <a href="source-class-Dropbox.AuthInfo.html#4-85" title="Go to source code">Dropbox/AuthInfo.php</a><br />
+			<b>Located at</b> <a href="source-class-Dropbox.AuthInfo.html#4-75" title="Go to source code">Dropbox/AuthInfo.php</a>
+		<br>
 	</div>
 
 
 
-	<table class="summary" id="methods">
+	<table class="summary methods" id="methods">
 	<caption>Methods summary</caption>
 	<tr data-order="loadFromJsonFile" id="_loadFromJsonFile">
 
 		<td class="attributes"><code>
 			 public static
+
 			array
 			
 			</code>
@@ -153,37 +147,29 @@ come with the SDK) but is probably not useful in typical Dropbox API apps.</p>
 		<code><a href="source-class-Dropbox.AuthInfo.html#12-37" title="Go to source code">loadFromJsonFile</a>( <span>string <var>$path</var></span> )</code>
 
 		<div class="description short">
-			
-<p>Loads a JSON file containing authorization information for your app. 'php
-authorize.php' in the examples directory for details about what this file should
-look like.</p>
-
+			<p>Loads a JSON file containing authorization information for your app. 'php authorize.php'
+in the examples directory for details about what this file should look like.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
-<p>Loads a JSON file containing authorization information for your app. 'php
-authorize.php' in the examples directory for details about what this file should
-look like.</p>
-
+			<p>Loads a JSON file containing authorization information for your app. 'php authorize.php'
+in the examples directory for details about what this file should look like.</p>
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$path</var></dt>
-					<dd><code>string</code><br>$path Path to a JSON file</dd>
+					<dd>Path to a JSON file</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>array</code><br>A <code><span class="php-keyword1">list</span>(string <span
-class="php-var">$accessToken</span>, Host <span
-class="php-var">$host</span>)</code>.<br />
+					array<br>A <code>list(string $accessToken, Host $host)</code>.
 				</div>
 
 				<h4>Throws</h4>
 				<div class="list">
-					<code><code><a href="class-Dropbox.AuthInfoLoadException.html">Dropbox\AuthInfoLoadException</a></code></code><br />
+					<code><a href="class-Dropbox.AuthInfoLoadException.html">Dropbox\AuthInfoLoadException</a></code>
 				</div>
 
 
@@ -213,9 +199,11 @@ class="php-var">$host</span>)</code>.<br />
 </div>
 
 	<div id="footer">
-		Dropbox SDK for PHP API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Dropbox SDK for PHP API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

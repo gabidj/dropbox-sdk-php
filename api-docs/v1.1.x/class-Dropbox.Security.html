@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="generator" content="ApiGen 2.8.0" />
+	<meta charset="utf-8">
 
 	<title>Class Dropbox\Security | Dropbox SDK for PHP</title>
 
-	<script type="text/javascript" src="resources/combined.js?152231664"></script>
-	<script type="text/javascript" src="elementlist.js?1099075339"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
 
 </head>
 
@@ -65,6 +62,7 @@
 				<li><a href="class-Dropbox.Exception_ProtocolError.html">Dropbox\Exception_ProtocolError</a></li>
 				<li><a href="class-Dropbox.Exception_RetryLater.html">Dropbox\Exception_RetryLater</a></li>
 				<li><a href="class-Dropbox.Exception_ServerError.html">Dropbox\Exception_ServerError</a></li>
+				<li><a href="class-Dropbox.HostLoadException.html">Dropbox\HostLoadException</a></li>
 				<li><a href="class-Dropbox.StreamReadException.html">Dropbox\StreamReadException</a></li>
 				<li><a href="class-Dropbox.WebAuthException_BadRequest.html">Dropbox\WebAuthException_BadRequest</a></li>
 				<li><a href="class-Dropbox.WebAuthException_BadState.html">Dropbox\WebAuthException_BadState</a></li>
@@ -83,10 +81,9 @@
 <div id="right">
 <div id="rightInner">
 	<form id="search">
-		<input type="hidden" name="cx" value="" />
-		<input type="hidden" name="ie" value="UTF-8" />
-		<input type="text" name="q" class="text" />
-		<input type="submit" value="Search" />
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
 	</form>
 
 	<div id="navigation">
@@ -98,9 +95,6 @@
 <span>Class</span>			</li>
 		</ul>
 		<ul>
-			<li>
-				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
-			</li>
 		</ul>
 		<ul>
 		</ul>
@@ -111,9 +105,7 @@
 
 
 	<div class="description">
-	
-<p>Helper functions for security-related things.</p>
-
+	<p>Helper functions for security-related things.</p>
 	</div>
 
 
@@ -127,20 +119,22 @@
 	<div class="info">
 		
 		
-		<b>Namespace:</b> Dropbox<br />
+		<b>Namespace:</b> Dropbox<br>
 		
 
-		<b>Located at</b> <a href="source-class-Dropbox.Security.html#4-67" title="Go to source code">Dropbox/Security.php</a><br />
+			<b>Located at</b> <a href="source-class-Dropbox.Security.html#4-67" title="Go to source code">Dropbox/Security.php</a>
+		<br>
 	</div>
 
 
 
-	<table class="summary" id="methods">
+	<table class="summary methods" id="methods">
 	<caption>Methods summary</caption>
 	<tr data-order="stringEquals" id="_stringEquals">
 
 		<td class="attributes"><code>
 			 public static
+
 			boolean
 			
 			</code>
@@ -151,40 +145,30 @@
 		<code><a href="source-class-Dropbox.Security.html#9-38" title="Go to source code">stringEquals</a>( <span>string <var>$a</var></span>, <span>string <var>$b</var></span> )</code>
 
 		<div class="description short">
-			
-<p>A string equality function that compares strings in a way that isn't
-suceptible to timing attacks. An attacker can figure out the length of the
-string, but not the string's value.</p>
-
+			<p>A string equality function that compares strings in a way that isn't suceptible to timing
+attacks.  An attacker can figure out the length of the string, but not the string's value.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
-<p>A string equality function that compares strings in a way that isn't
-suceptible to timing attacks. An attacker can figure out the length of the
-string, but not the string's value.</p>
+			<p>A string equality function that compares strings in a way that isn't suceptible to timing
+attacks.  An attacker can figure out the length of the string, but not the string's value.</p>
 
-<p>Use this when comparing two strings where:</p>
-
-<ul>
-	<li>one string could be influenced by an attacker</li>
-
-	<li>the other string contains data an attacker shouldn't know</li>
-</ul>
-
+<p>Use this when comparing two strings where:
+- one string could be influenced by an attacker
+- the other string contains data an attacker shouldn't know</p>
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$a</var></dt>
-					<dd><code>string</code><br>$a</dd>
+					<dd></dd>
 					<dt><var>$b</var></dt>
-					<dd><code>string</code><br>$b</dd>
+					<dd></dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>boolean</code><br />
+					boolean
 				</div>
 
 
@@ -197,6 +181,7 @@ string, but not the string's value.</p>
 
 		<td class="attributes"><code>
 			 public static
+
 			string
 			
 			</code>
@@ -207,26 +192,22 @@ string, but not the string's value.</p>
 		<code><a href="source-class-Dropbox.Security.html#40-66" title="Go to source code">getRandomBytes</a>( <span>integer <var>$numBytes</var></span> )</code>
 
 		<div class="description short">
-			
-<p>Returns cryptographically strong secure random bytes (as a PHP string).</p>
-
+			<p>Returns cryptographically strong secure random bytes (as a PHP string).</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
-<p>Returns cryptographically strong secure random bytes (as a PHP string).</p>
-
+			<p>Returns cryptographically strong secure random bytes (as a PHP string).</p>
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$numBytes</var></dt>
-					<dd><code>integer</code><br>$numBytes The number of bytes of random data to return.</dd>
+					<dd>The number of bytes of random data to return.</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>string</code><br />
+					string
 				</div>
 
 
@@ -257,9 +238,11 @@ string, but not the string's value.</p>
 </div>
 
 	<div id="footer">
-		Dropbox SDK for PHP API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Dropbox SDK for PHP API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

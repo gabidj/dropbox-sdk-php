@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="generator" content="ApiGen 2.8.0" />
+	<meta charset="utf-8">
 
 	<title>Dropbox SDK for PHP</title>
 
-	<script type="text/javascript" src="resources/combined.js"></script>
-	<script type="text/javascript" src="elementlist.js"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
 
 </head>
 
@@ -64,6 +61,7 @@
 				<li><a href="class-Dropbox.Exception_ProtocolError.html">Dropbox\Exception_ProtocolError</a></li>
 				<li><a href="class-Dropbox.Exception_RetryLater.html">Dropbox\Exception_RetryLater</a></li>
 				<li><a href="class-Dropbox.Exception_ServerError.html">Dropbox\Exception_ServerError</a></li>
+				<li><a href="class-Dropbox.HostLoadException.html">Dropbox\HostLoadException</a></li>
 				<li><a href="class-Dropbox.StreamReadException.html">Dropbox\StreamReadException</a></li>
 				<li><a href="class-Dropbox.WebAuthException_BadRequest.html">Dropbox\WebAuthException_BadRequest</a></li>
 				<li><a href="class-Dropbox.WebAuthException_BadState.html">Dropbox\WebAuthException_BadState</a></li>
@@ -82,10 +80,9 @@
 <div id="right">
 <div id="rightInner">
 	<form id="search">
-		<input type="hidden" name="cx" value="" />
-		<input type="hidden" name="ie" value="UTF-8" />
-		<input type="text" name="q" class="text" autofocus />
-		<input type="submit" value="Search" />
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search" autofocus>
 	</form>
 
 	<div id="navigation">
@@ -96,9 +93,6 @@
 <span>Class</span>			</li>
 		</ul>
 		<ul>
-			<li>
-				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
-			</li>
 		</ul>
 		<ul>
 		</ul>
@@ -127,27 +121,26 @@
 </tr>
 <tr>
 	<td class="name"><a href="class-Dropbox.AuthInfo.html">Dropbox\AuthInfo</a></td>
-	<td>This class contains methods to load an AppInfo and AccessToken from a JSON file.
-This can help simplify simple scripts (such as the example programs that come
-with the SDK) but is probably not useful in typical Dropbox API apps.</td>
+	<td><p>This class contains methods to load an AppInfo and AccessToken from a JSON file.
+This can help simplify simple scripts (such as the example programs that come with the
+SDK) but is probably not useful in typical Dropbox API apps.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Dropbox.Client.html">Dropbox\Client</a></td>
-	<td>The class used to make most Dropbox API calls. You can use this once you've
-gotten an AccessToken via <code><a href="class-Dropbox.WebAuth.html">Dropbox\WebAuth</a></code>.</td>
+	<td><p>The class used to make most Dropbox API calls.  You can use this once you've gotten an
+AccessToken via <code><a href="class-Dropbox.WebAuth.html">Dropbox\WebAuth</a></code>.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Dropbox.OAuth1AccessToken.html">Dropbox\OAuth1AccessToken</a></td>
-	<td>Use with <code><a href="class-Dropbox.OAuth1Upgrader.html">Dropbox\OAuth1Upgrader</a></code> to convert old OAuth 1 access tokens to OAuth 2
-access tokens. This SDK doesn't support using OAuth 1 access tokens for regular
-API calls.</td>
+	<td><p>Use with <code><a href="class-Dropbox.OAuth1Upgrader.html">Dropbox\OAuth1Upgrader</a></code> to convert old OAuth 1 access tokens
+to OAuth 2 access tokens.  This SDK doesn't support using OAuth 1
+access tokens for regular API calls.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Dropbox.OAuth1Upgrader.html">Dropbox\OAuth1Upgrader</a></td>
-	<td>Lets you convert OAuth 1 access tokens to OAuth 2 access tokens. First call
-OAuth1AccessTokenUpgrader::createOAuth2AccessToken() to get an OAuth 2
-access token. If that succeeds, call OAuth1AccessTokenUpgrader::disableOAuth1AccessToken() to disable the OAuth 1
-access token.</td>
+	<td><p>Lets you convert OAuth 1 access tokens to OAuth 2 access tokens.  First call <a href="OAuth1AccessTokenUpgrader::createOAuth2AccessToken()">OAuth1AccessTokenUpgrader::createOAuth2AccessToken()</a> to get an OAuth 2 access token.
+If that succeeds, call <a href="OAuth1AccessTokenUpgrader::disableOAuth1AccessToken()">OAuth1AccessTokenUpgrader::disableOAuth1AccessToken()</a>
+to disable the OAuth 1 access token.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Dropbox.Path.html">Dropbox\Path</a></td>
@@ -171,7 +164,7 @@ access token.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Dropbox.WebAuth.html">Dropbox\WebAuth</a></td>
-	<td>OAuth 2 "authorization code" flow. (This SDK does not support the "token" flow.)</td>
+	<td>OAuth 2 "authorization code" flow.  (This SDK does not support the "token" flow.)</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Dropbox.WebAuthBase.html">Dropbox\WebAuthBase</a></td>
@@ -179,8 +172,8 @@ access token.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Dropbox.WebAuthNoRedirect.html">Dropbox\WebAuthNoRedirect</a></td>
-	<td>OAuth 2 code-based authorization for apps that can't provide a redirect URI,
-typically command-line example apps.</td>
+	<td><p>OAuth 2 code-based authorization for apps that can't provide a redirect URI, typically
+command-line example apps.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Dropbox.WriteMode.html">Dropbox\WriteMode</a></td>
@@ -192,9 +185,9 @@ typically command-line example apps.</td>
 <caption>Interfaces summary</caption>
 <tr>
 	<td class="name"><a href="class-Dropbox.ValueStore.html">Dropbox\ValueStore</a></td>
-	<td>A contract for a class which provides simple get/set/clear access to a single
-string value. <code><a href="class-Dropbox.ArrayEntryStore.html">Dropbox\ArrayEntryStore</a></code> provides an implementation of this for
-storing a value in a single array element.</td>
+	<td><p>A contract for a class which provides simple get/set/clear access to a single string
+value.  <code><a href="class-Dropbox.ArrayEntryStore.html">Dropbox\ArrayEntryStore</a></code> provides an implementation of this for storing a value
+in a single array element.</p></td>
 </tr>
 </table>
 
@@ -211,8 +204,8 @@ storing a value in a single array element.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Dropbox.DeserializeException.html">Dropbox\DeserializeException</a></td>
-	<td>If, when loading a serialized RequestToken or AccessToken, the
-input string is malformed, this exception will be thrown.</td>
+	<td><p>If, when loading a serialized RequestToken or AccessToken, the input string is
+malformed, this exception will be thrown.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Dropbox.Exception.html">Dropbox\Exception</a></td>
@@ -220,24 +213,23 @@ input string is malformed, this exception will be thrown.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Dropbox.Exception_BadRequest.html">Dropbox\Exception_BadRequest</a></td>
-	<td>Thrown when the server tells us that our request was invalid. This is typically
-due to an HTTP 400 response from the server.</td>
+	<td><p>Thrown when the server tells us that our request was invalid.  This is typically due to an
+HTTP 400 response from the server.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Dropbox.Exception_BadResponse.html">Dropbox\Exception_BadResponse</a></td>
-	<td>When this SDK can't understand the response from the server. This could be due
-to a bug in this SDK or a buggy response from the Dropbox server.</td>
+	<td><p>When this SDK can't understand the response from the server.  This could be due to a bug in this
+SDK or a buggy response from the Dropbox server.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Dropbox.Exception_BadResponseCode.html">Dropbox\Exception_BadResponseCode</a></td>
-	<td>Thrown when the the Dropbox server responds with an HTTP status code we didn't
-expect.</td>
+	<td>Thrown when the the Dropbox server responds with an HTTP status code we didn't expect.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Dropbox.Exception_InvalidAccessToken.html">Dropbox\Exception_InvalidAccessToken</a></td>
-	<td>The Dropbox server said that the access token you used is invalid or expired.
-You should probably ask the user to go through the OAuth authorization flow
-again to get a new access token.</td>
+	<td><p>The Dropbox server said that the access token you used is invalid or expired.  You should
+probably ask the user to go through the OAuth authorization flow again to get a new access
+token.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Dropbox.Exception_NetworkIO.html">Dropbox\Exception_NetworkIO</a></td>
@@ -249,38 +241,40 @@ again to get a new access token.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Dropbox.Exception_ProtocolError.html">Dropbox\Exception_ProtocolError</a></td>
-	<td>There was an protocol misunderstanding between this SDK and the server. One of
-us didn't understand what the other one was saying.</td>
+	<td><p>There was an protocol misunderstanding between this SDK and the server.  One of us didn't
+understand what the other one was saying.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Dropbox.Exception_RetryLater.html">Dropbox\Exception_RetryLater</a></td>
-	<td>The Dropbox server said it couldn't fulfil our request right now, but that we
-should try again later.</td>
+	<td><p>The Dropbox server said it couldn't fulfil our request right now, but that we should try
+again later.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Dropbox.Exception_ServerError.html">Dropbox\Exception_ServerError</a></td>
-	<td>The Dropbox server said that there was an internal error when trying to fulfil
-our request. This usually corresponds to an HTTP 500 response.</td>
+	<td><p>The Dropbox server said that there was an internal error when trying to fulfil our request.
+This usually corresponds to an HTTP 500 response.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="class-Dropbox.HostLoadException.html">Dropbox\HostLoadException</a></td>
+	<td>Thrown by the <code>Host::loadFromJson</code> method if something goes wrong.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Dropbox.StreamReadException.html">Dropbox\StreamReadException</a></td>
-	<td>Thrown when there's an error reading from a stream that was passed in by the
-caller.</td>
+	<td>Thrown when there's an error reading from a stream that was passed in by the caller.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Dropbox.WebAuthException_BadRequest.html">Dropbox\WebAuthException_BadRequest</a></td>
-	<td>Thrown if the redirect URL was missing parameters or if the given parameters
-were not valid.</td>
+	<td>Thrown if the redirect URL was missing parameters or if the given parameters were not valid.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Dropbox.WebAuthException_BadState.html">Dropbox\WebAuthException_BadState</a></td>
-	<td>Thrown if all the parameters are correct, but there's no CSRF token in the
-session. This probably means that the session expired.</td>
+	<td><p>Thrown if all the parameters are correct, but there's no CSRF token in the session.  This
+probably means that the session expired.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Dropbox.WebAuthException_Csrf.html">Dropbox\WebAuthException_Csrf</a></td>
-	<td>Thrown if the given 'state' parameter doesn't contain the CSRF token from the
-user's session. This is blocked to prevent CSRF attacks.</td>
+	<td><p>Thrown if the given 'state' parameter doesn't contain the CSRF token from the user's session.
+This is blocked to prevent CSRF attacks.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Dropbox.WebAuthException_NotApproved.html">Dropbox\WebAuthException_NotApproved</a></td>
@@ -296,9 +290,11 @@ user's session. This is blocked to prevent CSRF attacks.</td>
 </div>
 
 	<div id="footer">
-		Dropbox SDK for PHP API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Dropbox SDK for PHP API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
+<script src="resources/combined.js?bdb748f6cc242f1d97515265fe5b50498125d156"></script>
+<script src="elementlist.js?82f7b7781d58e0a6966eef2905dfbcf3e24d02bc"></script>
 </body>
 </html>

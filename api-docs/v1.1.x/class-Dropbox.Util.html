@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="generator" content="ApiGen 2.8.0" />
+	<meta charset="utf-8">
 
 	<title>Class Dropbox\Util | Dropbox SDK for PHP</title>
 
-	<script type="text/javascript" src="resources/combined.js?152231664"></script>
-	<script type="text/javascript" src="elementlist.js?1099075339"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
 
 </head>
 
@@ -65,6 +62,7 @@
 				<li><a href="class-Dropbox.Exception_ProtocolError.html">Dropbox\Exception_ProtocolError</a></li>
 				<li><a href="class-Dropbox.Exception_RetryLater.html">Dropbox\Exception_RetryLater</a></li>
 				<li><a href="class-Dropbox.Exception_ServerError.html">Dropbox\Exception_ServerError</a></li>
+				<li><a href="class-Dropbox.HostLoadException.html">Dropbox\HostLoadException</a></li>
 				<li><a href="class-Dropbox.StreamReadException.html">Dropbox\StreamReadException</a></li>
 				<li><a href="class-Dropbox.WebAuthException_BadRequest.html">Dropbox\WebAuthException_BadRequest</a></li>
 				<li><a href="class-Dropbox.WebAuthException_BadState.html">Dropbox\WebAuthException_BadState</a></li>
@@ -83,10 +81,9 @@
 <div id="right">
 <div id="rightInner">
 	<form id="search">
-		<input type="hidden" name="cx" value="" />
-		<input type="hidden" name="ie" value="UTF-8" />
-		<input type="text" name="q" class="text" />
-		<input type="submit" value="Search" />
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
 	</form>
 
 	<div id="navigation">
@@ -98,9 +95,6 @@
 <span>Class</span>			</li>
 		</ul>
 		<ul>
-			<li>
-				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
-			</li>
 		</ul>
 		<ul>
 		</ul>
@@ -122,20 +116,63 @@
 	<div class="info">
 		
 		
-		<b>Namespace:</b> Dropbox<br />
+		<b>Namespace:</b> Dropbox<br>
 		
 
-		<b>Located at</b> <a href="source-class-Dropbox.Util.html#4-33" title="Go to source code">Dropbox/Util.php</a><br />
+			<b>Located at</b> <a href="source-class-Dropbox.Util.html#4-116" title="Go to source code">Dropbox/Util.php</a>
+		<br>
 	</div>
 
 
 
-	<table class="summary" id="methods">
+	<table class="summary methods" id="methods">
 	<caption>Methods summary</caption>
+	<tr data-order="q" id="_q">
+
+		<td class="attributes"><code>
+			 public static
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_q">#</a>
+		<code><a href="source-class-Dropbox.Util.html#9-45" title="Go to source code">q</a>( <span>string <var>$string</var></span> )</code>
+
+		<div class="description short">
+			<p>Return a double-quoted version of the given string, using PHP-escape sequences
+for all non-printable and non-ASCII characters.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return a double-quoted version of the given string, using PHP-escape sequences
+for all non-printable and non-ASCII characters.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$string</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="stripUtf8Bom" id="_stripUtf8Bom">
 
 		<td class="attributes"><code>
 			 public static
+
 			string
 			
 			</code>
@@ -143,36 +180,118 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_stripUtf8Bom">#</a>
-		<code><a href="source-class-Dropbox.Util.html#14-32" title="Go to source code">stripUtf8Bom</a>( <span>string <var>$string</var></span> )</code>
+		<code><a href="source-class-Dropbox.Util.html#47-67" title="Go to source code">stripUtf8Bom</a>( <span>string <var>$string</var></span> )</code>
 
 		<div class="description short">
-			
-<p>If the given string begins with the UTF-8 BOM (byte order mark), remove it
-and return whatever is left. Otherwise, return the original string
-untouched.</p>
-
+			<p>If the given string begins with the UTF-8 BOM (byte order mark), remove it and
+return whatever is left.  Otherwise, return the original string untouched.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
-<p>If the given string begins with the UTF-8 BOM (byte order mark), remove it
-and return whatever is left. Otherwise, return the original string
-untouched.</p>
+			<p>If the given string begins with the UTF-8 BOM (byte order mark), remove it and
+return whatever is left.  Otherwise, return the original string untouched.</p>
 
-<p>Though it's not recommended for UTF-8 to have a BOM, the standard allows it
-to support software that isn't Unicode-aware.</p>
-
+<p>Though it's not recommended for UTF-8 to have a BOM, the standard allows it to
+support software that isn't Unicode-aware.</p>
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$string</var></dt>
-					<dd><code>string</code><br>$string A UTF-8 encoded string.</dd>
+					<dd>A UTF-8 encoded string.</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>string</code><br />
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="startsWith" id="_startsWith">
+
+		<td class="attributes"><code>
+			 public static
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_startsWith">#</a>
+		<code><a href="source-class-Dropbox.Util.html#69-87" title="Go to source code">startsWith</a>( <span>string <var>$s</var></span>, <span>string <var>$prefix</var></span>, <span>boolean <var>$caseInsensitive</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Return whether <code>$s</code> starts with <code>$prefix</code>.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return whether <code>$s</code> starts with <code>$prefix</code>.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd></dd>
+					<dt><var>$prefix</var></dt>
+					<dd></dd>
+					<dt><var>$caseInsensitive</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="stripPrefix" id="_stripPrefix">
+
+		<td class="attributes"><code>
+			 public static
+
+			string|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_stripPrefix">#</a>
+		<code><a href="source-class-Dropbox.Util.html#89-115" title="Go to source code">stripPrefix</a>( <span>string <var>$s</var></span>, <span>string <var>$prefix</var></span>, <span>boolean <var>$caseInsensitive</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>If <code>$s</code> starts with <code>$prefix</code>, return <code>$s</code> with <code>$prefix</code> removed.  Otherwise,
+return <code>null</code>.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>If <code>$s</code> starts with <code>$prefix</code>, return <code>$s</code> with <code>$prefix</code> removed.  Otherwise,
+return <code>null</code>.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$s</var></dt>
+					<dd></dd>
+					<dt><var>$prefix</var></dt>
+					<dd></dd>
+					<dt><var>$caseInsensitive</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string|null
 				</div>
 
 
@@ -190,6 +309,57 @@ to support software that isn't Unicode-aware.</p>
 
 
 
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="SPECIAL_ESCAPE_IN" id="SPECIAL_ESCAPE_IN">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-Dropbox.Util.html#6" title="Go to source code"><b>SPECIAL_ESCAPE_IN</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#SPECIAL_ESCAPE_IN" class="anchor">#</a>
+				<code><span class="php-quote">&quot;\r\n\t\\\&quot;&quot;</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="SPECIAL_ESCAPE_OUT" id="SPECIAL_ESCAPE_OUT">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-Dropbox.Util.html#7" title="Go to source code"><b>SPECIAL_ESCAPE_OUT</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#SPECIAL_ESCAPE_OUT" class="anchor">#</a>
+				<code><span class="php-quote">&quot;rnt\\\&quot;&quot;</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
 
 
 
@@ -203,9 +373,11 @@ to support software that isn't Unicode-aware.</p>
 </div>
 
 	<div id="footer">
-		Dropbox SDK for PHP API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Dropbox SDK for PHP API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

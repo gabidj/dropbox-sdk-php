@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="generator" content="ApiGen 2.8.0" />
+	<meta charset="utf-8">
 
 	<title>Interface Dropbox\ValueStore | Dropbox SDK for PHP</title>
 
-	<script type="text/javascript" src="resources/combined.js?152231664"></script>
-	<script type="text/javascript" src="elementlist.js?1099075339"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
 
 </head>
 
@@ -65,6 +62,7 @@
 				<li><a href="class-Dropbox.Exception_ProtocolError.html">Dropbox\Exception_ProtocolError</a></li>
 				<li><a href="class-Dropbox.Exception_RetryLater.html">Dropbox\Exception_RetryLater</a></li>
 				<li><a href="class-Dropbox.Exception_ServerError.html">Dropbox\Exception_ServerError</a></li>
+				<li><a href="class-Dropbox.HostLoadException.html">Dropbox\HostLoadException</a></li>
 				<li><a href="class-Dropbox.StreamReadException.html">Dropbox\StreamReadException</a></li>
 				<li><a href="class-Dropbox.WebAuthException_BadRequest.html">Dropbox\WebAuthException_BadRequest</a></li>
 				<li><a href="class-Dropbox.WebAuthException_BadState.html">Dropbox\WebAuthException_BadState</a></li>
@@ -83,10 +81,9 @@
 <div id="right">
 <div id="rightInner">
 	<form id="search">
-		<input type="hidden" name="cx" value="" />
-		<input type="hidden" name="ie" value="UTF-8" />
-		<input type="text" name="q" class="text" />
-		<input type="submit" value="Search" />
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
 	</form>
 
 	<div id="navigation">
@@ -98,9 +95,6 @@
 <span>Class</span>			</li>
 		</ul>
 		<ul>
-			<li>
-				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
-			</li>
 		</ul>
 		<ul>
 		</ul>
@@ -111,73 +105,39 @@
 
 
 	<div class="description">
-	
-<p>A contract for a class which provides simple get/set/clear access to a single
-string value. <code><a href="class-Dropbox.ArrayEntryStore.html">Dropbox\ArrayEntryStore</a></code> provides an implementation of this for
-storing a value in a single array element.</p>
+	<p>A contract for a class which provides simple get/set/clear access to a single string
+value.  <code><a href="class-Dropbox.ArrayEntryStore.html">Dropbox\ArrayEntryStore</a></code> provides an implementation of this for storing a value
+in a single array element.</p>
 
 <p>Example implementation for a Memcache-based backing store:</p>
 
-<pre>
-<span class="php-keyword1">class</span> MemcacheValueStore <span
-class="php-keyword1">implements</span> ValueStore
+<pre><span class="php-keyword1">class</span> MemcacheValueStore <span class="php-keyword1">implements</span> ValueStore
 {
-    <span
-class="php-keyword1">private</span> <span class="php-var">$key</span>;
-    <span
-class="php-keyword1">private</span> <span
-class="php-var">$memcache</span>;
+    <span class="php-keyword1">private</span> <span class="php-var">$key</span>;
+    <span class="php-keyword1">private</span> <span class="php-var">$memcache</span>;
 
-    <span
-class="php-keyword1">function</span> __construct(<span
-class="php-var">$memcache</span>, <span
-class="php-var">$key</span>)
+    <span class="php-keyword1">function</span> __construct(<span class="php-var">$memcache</span>, <span class="php-var">$key</span>)
     {
-        <span
-class="php-var">$this</span>-&gt;memcache = <span
-class="php-var">$memcache</span>;
-        <span
-class="php-var">$this</span>-&gt;<span class="php-keyword2">key</span> = <span
-class="php-var">$key</span>;
+        <span class="php-var">$this</span>-&gt;memcache = <span class="php-var">$memcache</span>;
+        <span class="php-var">$this</span>-&gt;<span class="php-keyword2">key</span> = <span class="php-var">$key</span>;
     }
 
-    <span
-class="php-keyword1">function</span> get()
+    <span class="php-keyword1">function</span> get()
     {
-        <span
-class="php-var">$value</span> = <span
-class="php-var">$this</span>-&gt;memcache-&gt;get(<span
-class="php-var">$this</span>-&gt;getKey());
-        <span
-class="php-keyword1">return</span> <span class="php-var">$value</span> === <span
-class="php-keyword1">false</span> ? <span
-class="php-keyword1">null</span> : <span
-class="php-keyword2">base64_decode</span>(<span
-class="php-var">$value</span>);
+        <span class="php-var">$value</span> = <span class="php-var">$this</span>-&gt;memcache-&gt;get(<span class="php-var">$this</span>-&gt;getKey());
+        <span class="php-keyword1">return</span> <span class="php-var">$value</span> === <span class="php-keyword1">false</span> ? <span class="php-keyword1">null</span> : <span class="php-keyword2">base64_decode</span>(<span class="php-var">$value</span>);
     }
 
-    <span
-class="php-keyword1">function</span> set(<span
-class="php-var">$value</span>)
+    <span class="php-keyword1">function</span> set(<span class="php-var">$value</span>)
     {
-        <span
-class="php-var">$this</span>-&gt;memcache-&gt;set(<span
-class="php-var">$this</span>-&gt;<span class="php-keyword2">key</span>, <span
-class="php-keyword2">base64_encode</span>(<span
-class="php-var">$value</span>));
+        <span class="php-var">$this</span>-&gt;memcache-&gt;set(<span class="php-var">$this</span>-&gt;<span class="php-keyword2">key</span>, <span class="php-keyword2">base64_encode</span>(<span class="php-var">$value</span>));
     }
 
-    <span
-class="php-keyword1">function</span> clear()
+    <span class="php-keyword1">function</span> clear()
     {
-        <span
-class="php-var">$this</span>-&gt;memcache-&gt;<span
-class="php-keyword2">delete</span>(<span class="php-var">$this</span>-&gt;<span
-class="php-keyword2">key</span>);
+        <span class="php-var">$this</span>-&gt;memcache-&gt;<span class="php-keyword2">delete</span>(<span class="php-var">$this</span>-&gt;<span class="php-keyword2">key</span>);
     }
-}
-</pre>
-
+}</pre>
 	</div>
 
 
@@ -195,20 +155,22 @@ class="php-keyword2">key</span>);
 	<div class="info">
 		
 		
-		<b>Namespace:</b> Dropbox<br />
+		<b>Namespace:</b> Dropbox<br>
 		
 
-		<b>Located at</b> <a href="source-class-Dropbox.ValueStore.html#4-61" title="Go to source code">Dropbox/ValueStore.php</a><br />
+			<b>Located at</b> <a href="source-class-Dropbox.ValueStore.html#4-61" title="Go to source code">Dropbox/ValueStore.php</a>
+		<br>
 	</div>
 
 
 
-	<table class="summary" id="methods">
+	<table class="summary methods" id="methods">
 	<caption>Methods summary</caption>
 	<tr data-order="get" id="_get">
 
 		<td class="attributes"><code>
 			 public 
+
 			string
 			
 			</code>
@@ -219,23 +181,17 @@ class="php-keyword2">key</span>);
 		<code><a href="source-class-Dropbox.ValueStore.html#43-48" title="Go to source code">get</a>( )</code>
 
 		<div class="description short">
-			
-<p>Returns the entry's current value or <code><span
-class="php-keyword1">null</span></code> if nothing is set.</p>
-
+			<p>Returns the entry's current value or <code>null</code> if nothing is set.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
-<p>Returns the entry's current value or <code><span
-class="php-keyword1">null</span></code> if nothing is set.</p>
-
+			<p>Returns the entry's current value or <code>null</code> if nothing is set.</p>
 
 
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>string</code><br />
+					string
 				</div>
 
 
@@ -248,6 +204,7 @@ class="php-keyword1">null</span></code> if nothing is set.</p>
 
 		<td class="attributes"><code>
 			 public 
+
 			
 			
 			</code>
@@ -258,21 +215,17 @@ class="php-keyword1">null</span></code> if nothing is set.</p>
 		<code><a href="source-class-Dropbox.ValueStore.html#50-55" title="Go to source code">set</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
-			
-<p>Set the entry to the given value.</p>
-
+			<p>Set the entry to the given value.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
-<p>Set the entry to the given value.</p>
-
+			<p>Set the entry to the given value.</p>
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$value</var></dt>
-					<dd><code>string</code><br>$value</dd>
+					<dd></dd>
 				</dl></div>
 
 
@@ -286,6 +239,7 @@ class="php-keyword1">null</span></code> if nothing is set.</p>
 
 		<td class="attributes"><code>
 			 public 
+
 			
 			
 			</code>
@@ -296,15 +250,11 @@ class="php-keyword1">null</span></code> if nothing is set.</p>
 		<code><a href="source-class-Dropbox.ValueStore.html#57-60" title="Go to source code">clear</a>( )</code>
 
 		<div class="description short">
-			
-<p>Remove the value.</p>
-
+			<p>Remove the value.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
-<p>Remove the value.</p>
-
+			<p>Remove the value.</p>
 
 
 
@@ -337,9 +287,11 @@ class="php-keyword1">null</span></code> if nothing is set.</p>
 </div>
 
 	<div id="footer">
-		Dropbox SDK for PHP API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Dropbox SDK for PHP API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="generator" content="ApiGen 2.8.0" />
+	<meta charset="utf-8">
 
 	<title>Class Dropbox\OAuth1AccessToken | Dropbox SDK for PHP</title>
 
-	<script type="text/javascript" src="resources/combined.js?152231664"></script>
-	<script type="text/javascript" src="elementlist.js?1099075339"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
 
 </head>
 
@@ -65,6 +62,7 @@
 				<li><a href="class-Dropbox.Exception_ProtocolError.html">Dropbox\Exception_ProtocolError</a></li>
 				<li><a href="class-Dropbox.Exception_RetryLater.html">Dropbox\Exception_RetryLater</a></li>
 				<li><a href="class-Dropbox.Exception_ServerError.html">Dropbox\Exception_ServerError</a></li>
+				<li><a href="class-Dropbox.HostLoadException.html">Dropbox\HostLoadException</a></li>
 				<li><a href="class-Dropbox.StreamReadException.html">Dropbox\StreamReadException</a></li>
 				<li><a href="class-Dropbox.WebAuthException_BadRequest.html">Dropbox\WebAuthException_BadRequest</a></li>
 				<li><a href="class-Dropbox.WebAuthException_BadState.html">Dropbox\WebAuthException_BadState</a></li>
@@ -83,10 +81,9 @@
 <div id="right">
 <div id="rightInner">
 	<form id="search">
-		<input type="hidden" name="cx" value="" />
-		<input type="hidden" name="ie" value="UTF-8" />
-		<input type="text" name="q" class="text" />
-		<input type="submit" value="Search" />
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
 	</form>
 
 	<div id="navigation">
@@ -98,9 +95,6 @@
 <span>Class</span>			</li>
 		</ul>
 		<ul>
-			<li>
-				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
-			</li>
 		</ul>
 		<ul>
 		</ul>
@@ -111,11 +105,9 @@
 
 
 	<div class="description">
-	
-<p>Use with <code><a href="class-Dropbox.OAuth1Upgrader.html">Dropbox\OAuth1Upgrader</a></code> to convert old OAuth 1 access tokens to OAuth
-2 access tokens. This SDK doesn't support using OAuth 1 access tokens for
-regular API calls.</p>
-
+	<p>Use with <code><a href="class-Dropbox.OAuth1Upgrader.html">Dropbox\OAuth1Upgrader</a></code> to convert old OAuth 1 access tokens
+to OAuth 2 access tokens.  This SDK doesn't support using OAuth 1
+access tokens for regular API calls.</p>
 	</div>
 
 
@@ -129,20 +121,22 @@ regular API calls.</p>
 	<div class="info">
 		
 		
-		<b>Namespace:</b> Dropbox<br />
+		<b>Namespace:</b> Dropbox<br>
 		
 
-		<b>Located at</b> <a href="source-class-Dropbox.OAuth1AccessToken.html#4-61" title="Go to source code">Dropbox/OAuth1AccessToken.php</a><br />
+			<b>Located at</b> <a href="source-class-Dropbox.OAuth1AccessToken.html#4-61" title="Go to source code">Dropbox/OAuth1AccessToken.php</a>
+		<br>
 	</div>
 
 
 
-	<table class="summary" id="methods">
+	<table class="summary methods" id="methods">
 	<caption>Methods summary</caption>
 	<tr data-order="getKey" id="_getKey">
 
 		<td class="attributes"><code>
 			 public 
+
 			string
 			
 			</code>
@@ -153,21 +147,17 @@ regular API calls.</p>
 		<code><a href="source-class-Dropbox.OAuth1AccessToken.html#11-16" title="Go to source code">getKey</a>( )</code>
 
 		<div class="description short">
-			
-<p>The OAuth 1 access token key.</p>
-
+			<p>The OAuth 1 access token key.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
-<p>The OAuth 1 access token key.</p>
-
+			<p>The OAuth 1 access token key.</p>
 
 
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>string</code><br />
+					string
 				</div>
 
 
@@ -180,6 +170,7 @@ regular API calls.</p>
 
 		<td class="attributes"><code>
 			 public 
+
 			string
 			
 			</code>
@@ -190,25 +181,21 @@ regular API calls.</p>
 		<code><a href="source-class-Dropbox.OAuth1AccessToken.html#21-30" title="Go to source code">getSecret</a>( )</code>
 
 		<div class="description short">
-			
-<p>The OAuth 1 access token secret.</p>
-
+			<p>The OAuth 1 access token secret.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
-<p>The OAuth 1 access token secret.</p>
+			<p>The OAuth 1 access token secret.</p>
 
-<p>Make sure that this is kept a secret. Someone with your app secret can
-impesonate your application. People sometimes ask for help on the Dropbox API
-forums and copy/paste code that includes their app secret. Do not do that.</p>
-
+<p>Make sure that this is kept a secret.  Someone with your app secret can impesonate your
+application.  People sometimes ask for help on the Dropbox API forums and
+copy/paste code that includes their app secret.  Do not do that.</p>
 
 
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>string</code><br />
+					string
 				</div>
 
 
@@ -221,6 +208,7 @@ forums and copy/paste code that includes their app secret. Do not do that.</p>
 
 		<td class="attributes"><code>
 			 public 
+
 			
 			
 			</code>
@@ -231,23 +219,19 @@ forums and copy/paste code that includes their app secret. Do not do that.</p>
 		<code><a href="source-class-Dropbox.OAuth1AccessToken.html#35-50" title="Go to source code">__construct</a>( <span>string <var>$key</var></span>, <span>string <var>$secret</var></span> )</code>
 
 		<div class="description short">
-			
-<p>Constructor.</p>
-
+			<p>Constructor.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
-<p>Constructor.</p>
-
+			<p>Constructor.</p>
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$key</var></dt>
-					<dd><code>string</code><br>$key <code><a href="class-Dropbox.OAuth1AccessToken.html#_getKey">Dropbox\OAuth1AccessToken::getKey()</a></code></dd>
+					<dd><code><a href="class-Dropbox.OAuth1AccessToken.html#_getKey">Dropbox\OAuth1AccessToken::getKey()</a></code></dd>
 					<dt><var>$secret</var></dt>
-					<dd><code>string</code><br>$secret <code><a href="class-Dropbox.OAuth1AccessToken.html#_getSecret">Dropbox\OAuth1AccessToken::getSecret()</a></code></dd>
+					<dd><code><a href="class-Dropbox.OAuth1AccessToken.html#_getSecret">Dropbox\OAuth1AccessToken::getSecret()</a></code></dd>
 				</dl></div>
 
 
@@ -279,9 +263,11 @@ forums and copy/paste code that includes their app secret. Do not do that.</p>
 </div>
 
 	<div id="footer">
-		Dropbox SDK for PHP API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		Dropbox SDK for PHP API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>
