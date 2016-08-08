@@ -16,6 +16,10 @@ class Util
      */
     public static function q($string)
     {
+        # HACK: "self::SPECIAL_ESCAPE_OUT[...]" is not valid syntax in PHP 5.3, so put
+        # it in a local variable first.
+        $special_escape_out = self::SPECIAL_ESCAPE_OUT;
+
         $r = "\"";
         $len = \strlen($string);
         for ($i = 0; $i < $len; $i++) {
@@ -24,7 +28,7 @@ class Util
             if ($escape_i !== false) {
                 // Characters with a special escape code.
                 $r .= "\\";
-                $r .= self::SPECIAL_ESCAPE_OUT[$escape_i];
+                $r .= $special_escape_out[$escape_i];
             }
             else if ($c >= "\x20" and $c <= "\x7e") {
                 // Printable characters.
