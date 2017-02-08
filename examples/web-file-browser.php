@@ -317,6 +317,18 @@ function launchBuiltInWebServer($argv)
         1 => STDOUT,              // Relay process' stdout to ours.
         2 => STDERR,              // Relay process' stderr to ours.
     );
+    
+    // Fix for Windows Platform
+    if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+	    $php_file = __FILE__;
+        $explodedCmd = explode(' ', $cmd);
+        foreach($explodedCmd as &$innerCmd){
+            // remove double inverted comma from each parameter
+			$innerCmd = trim($innerCmd, '"');
+		}
+        $cmd = implode(' ', $explodedCmd);
+    }
+    
     $proc = proc_open($cmd, $descriptors, $pipes);
     if ($proc === false) {
         fprintf(STDERR,
